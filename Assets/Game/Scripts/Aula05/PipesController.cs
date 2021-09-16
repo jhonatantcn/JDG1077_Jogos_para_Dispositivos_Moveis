@@ -25,19 +25,22 @@ public class PipesController : MonoBehaviour
         if (player.transform.position.x - pipesList[0].transform.position.x > playerPipeDistance)
         {
             hudController.ScoreIncrease();
-            pipesList[0].transform.position = new Vector2(pipesList[0].transform.position.x + spawnPipeDistance, pipesList[0].transform.position.y);
+            int rand = Random.Range(-3, 3);
+            pipesList[0].transform.position = new Vector2(pipesList[0].transform.position.x + spawnPipeDistance, rand);
         }
 
         if (player.transform.position.x - pipesList[1].transform.position.x > playerPipeDistance)
         {
             hudController.ScoreIncrease();
-            pipesList[1].transform.position = new Vector2(pipesList[1].transform.position.x + spawnPipeDistance, pipesList[1].transform.position.y);
+            int rand = Random.Range(-3, 3);
+            pipesList[1].transform.position = new Vector2(pipesList[1].transform.position.x + spawnPipeDistance, rand);
         }
 
         if (player.transform.position.x - pipesList[2].transform.position.x > playerPipeDistance)
         {
             hudController.ScoreIncrease();
-            pipesList[2].transform.position = new Vector2(pipesList[2].transform.position.x + spawnPipeDistance, pipesList[2].transform.position.y);
+            int rand = Random.Range(-3, 3);
+            pipesList[2].transform.position = new Vector2(pipesList[2].transform.position.x + spawnPipeDistance, rand);
         }
     }
 }
