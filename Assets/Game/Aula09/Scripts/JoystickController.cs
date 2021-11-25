@@ -45,7 +45,7 @@ public class JoystickController : MonoBehaviour
             // Restringe o deslocamento em magnitude 1.0f para determinar a direção
             direction = Vector2.ClampMagnitude(offset, 1.0f);
 
-            moveCharacter(direction);
+            MoveCharacter(direction);
 
             // Deslocamento do objeto circle (x,y)
             circle.position = pointA + direction * 5;
@@ -58,7 +58,7 @@ public class JoystickController : MonoBehaviour
         }
     }
 
-    private void moveCharacter(Vector2 direction)
+    private void MoveCharacter(Vector2 direction)
     {
         player.Translate(direction * speed * Time.deltaTime);
         /** 
